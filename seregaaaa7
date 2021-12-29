@@ -1,0 +1,170 @@
+--1.3--
+
+function testA(a) {         
+
+    var x="";
+
+    if (x=a)
+
+    return x;
+}
+
+
+--1.4--
+
+1)function testSum(a, b) {
+    var x;
+    if(a>b) 
+        x=a+b;
+    else
+        x=a+b;
+    return x;
+}
+
+
+2) function testOperation(a, b) {
+    var x;
+    x=(a * b) % (a + b)*2
+    return x;
+}
+
+--1.5--
+
+1)function testIf(a, b) {
+     var x = a > b ? (a + b) : (a * b);
+    
+    return x;
+}
+
+
+2)function testIf(a, b) {
+    var x; if (a<b) {
+    x=a+b;
+}   else if (a>b) { 
+    x=a-b; 
+}   else{ 
+    x=a*b;
+}
+    return x;
+}
+
+3) function testCase(a) {
+    return ['Ноль', 'Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'][a];
+}
+
+--1.6--
+
+1)function testFactorial(a) {
+    var x = 1;
+  for (var i = 2; i <= a; i++)
+    x *= i;
+
+    return x;
+}
+
+2)function testWhile(a) {
+    var x = 0;
+    var i = 1;                 
+    while (i <= a) {        
+        if (i % 2 == 0) {  
+            x += i;            
+        }
+        i++;                    
+    }
+    return x;
+}
+
+
+
+--2.1--
+
+function my_function(n) {
+  return n <= 1? 1 : my_function(n - 1) + ' ' + n;
+}
+
+--2.3--
+
+1)function testStr(a, b) {
+    var c = a + b;
+return c.length;
+}
+
+2)function testStr(str, n) {
+  return str.charAt(n - 1);
+}
+
+
+3)function testStr(a, b) {
+    return a.toUpperCase() + b.toLowerCase();
+}
+
+4)function testStr(a, b) {
+  return a.indexOf(b);
+}
+
+--2.4--
+
+function testArray(a, b) {
+    const total = a.concat(b);
+    return [...total].reverse().join('') + "Иванов";
+}
+
+--2.5--
+
+function testDateTime (a, b) {
+var date1 = new Date(a);
+var date2 = new Date(b);
+var days = new Array('Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота');
+var dayWeek1 = date1.getDay();
+var dayWeek2 = date2.getDay();
+if (date1 > date2) {
+return days[dayWeek1];
+} else {
+return days[dayWeek2];
+}
+}
+
+
+--2.6--
+
+1)function testMath(a) {
+            return Math.sin(a * Math.PI / 180);
+        }
+
+2)function testMath(a, b, c) {
+  var S;
+  S = (1 / 2) * a * b * Math.sin((Math.PI * c) / 180);
+  return S;
+}
+
+3)const testMath = (...args) => Math.floor(Math.max(...args) / Math.min(...args));
+
+4)function testMath(a, b) {
+    return Math.pow(a, b);
+}
+
+
+
+--3.1--
+
+function testErrorFunc(a, func) { 
+    let x;
+    try {
+        x=func(a);
+        return x;
+        }
+   catch(EvEr) {
+       if (EvEr="EvalError");
+          return (EvEr);
+                    }   
+    }
+
+
+
+--3.3--
+
+function testRegExp(s, sub_s)
+{
+var arr = s.match( new RegExp(sub_s, 'g') ) || [];
+return arr.join();
+}
